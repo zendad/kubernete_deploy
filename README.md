@@ -14,12 +14,11 @@ You should at least give below information:
 
 Suppose your kubeadm nodes are like below (You can make the nodes' hostname resolvable):
 
-| **Role**    | **Hostname**  | IP Address    |
-|:------------|:--------------:---------------|
-| Master      | kuber-master  |10.208.104.141 |
-| Node        | kuber-node1   |10.208.104.142 |
-| Node        | kuber-node2   |10.208.104.143 |
-| Node        | kuber-node3   |10.208.104.144 |
+**Role** **Hostname**  IP Address
+Master   kuber-master  10.208.104.141
+Node	 kuber-node1   10.208.104.142
+Node	 kuber-node2   10.208.104.143
+Node     kuber-node3   10.208.104.144
 
 Upload the kubernete_deploy role/cookbook to Chef server:
 
