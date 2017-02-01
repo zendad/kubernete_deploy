@@ -1,0 +1,15 @@
+{
+  "name": "kubernetes-node",
+  "description": "This will deploy the kubernetes nodes",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+  },
+  "override_attributes": {
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[kubernete_deploy::node]"
+  ],
+  "env_run_lists": {
+  }
+}
