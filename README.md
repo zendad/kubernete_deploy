@@ -47,5 +47,5 @@ Start boostraping your nodes:
 * kubernete_deploy::packages  has all the packages to be installed on master and node
 
 ##Units Tests.
-run `chef exec rspec` to see results of unit tests
+run `chef exec rspec` in the cookbook root to see results of unit tests
 
