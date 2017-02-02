@@ -46,6 +46,16 @@ Start boostraping your nodes:
 * kubernete_deploy::node  Install and configure Kubernetes node.
 * kubernete_deploy::packages  has all the packages to be installed on master and node
 
-##Units Tests.
-run `chef exec rspec` in the cookbook root to see results of unit tests
+##Cookbook Tests.
+run `chef exec rspec` or `chef exec rspec` in the cookbook root to see results of unit tests for each recipe
+
+you can also test the cookbook using the `.kitchen.yml` configuration file in the cookbook root directory. Virtualbox is a prerequsite for this test.
+whilst in the cookbook run the following commands:
+`kitchen create` this will create the CentOS instance for tests
+Then run `kitchen converge` to apply the cookbook to the CentOS virtual machine.
+Test Kitchen runs chef-client on the instance. When the chef-client run completes successfully, Test Kitchen exits with exit code 0.
+Run the following to check the exit code `echo $?`
+
+
+
 

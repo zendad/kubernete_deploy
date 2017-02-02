@@ -6,11 +6,11 @@
 include_recipe "::packages"
 
 execute "initiate kubeadm master - get token" do
-	command "kubeadm init --token 56fa9a.705a6001db6a6756"
+	command "sudo kubeadm init --token 56fa9a.705a6001db6a6756"
 	action :run
 end
 
 execute "pod network install" do
-	command "kubectl apply -f https://git.io/weave-kube"
+	command " sudo kubectl apply -f https://git.io/weave-kube"
 	action :run
 end

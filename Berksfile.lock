@@ -1,0 +1,7 @@
+DEPENDENCIES
+  kubernete_deploy
+    path: .
+    metadata: true
+
+GRAPH
+  kubernete_deploy (0.1.0)
