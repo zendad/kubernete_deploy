@@ -16,14 +16,6 @@ platforms:
   - name: centos-7.3
 
 suites:
-  - name: default
-    run_list:
-      - recipe[kubernete_deploy::default]
-    verifier:
-      inspec_tests:
-        - test/smoke/default
-    attributes:
-
   - name: master
     run_list:
       - recipe[kubernete_deploy::master]
