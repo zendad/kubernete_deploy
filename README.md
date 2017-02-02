@@ -46,7 +46,7 @@ Start boostraping your nodes:
 * kubernete_deploy::node  Install and configure Kubernetes node.
 * kubernete_deploy::packages  has all the packages to be installed on master and node
 
-##Cookbook Tests.
+##Cookbook Tests
 run `chef exec rspec` or `chef exec rspec` in the cookbook root to see results of unit tests for each recipe
 
 you can also test the cookbook using the `.kitchen.yml` configuration file in the cookbook root directory. Virtualbox is a prerequsite for this test.
