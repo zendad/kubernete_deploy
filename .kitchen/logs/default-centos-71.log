@@ -1,0 +1,9 @@
+I, [2017-02-02T15:46:02.485426 #25236]  INFO -- default-centos-71: -----> Creating <default-centos-71>...
+I, [2017-02-02T15:46:03.288880 #25236]  INFO -- default-centos-71: Bringing machine 'default' up with 'virtualbox' provider...
+I, [2017-02-02T15:46:03.511312 #25236]  INFO -- default-centos-71: ==> default: Box 'bento/centos-7.1' could not be found. Attempting to find and install...
+I, [2017-02-02T15:46:03.511425 #25236]  INFO -- default-centos-71:     default: Box Provider: virtualbox
+I, [2017-02-02T15:46:03.511550 #25236]  INFO -- default-centos-71:     default: Box Version: >= 0
+I, [2017-02-02T15:46:08.310177 #25236]  INFO -- default-centos-71: ==> default: Loading metadata for box 'bento/centos-7.1'
+I, [2017-02-02T15:46:08.310378 #25236]  INFO -- default-centos-71:     default: URL: https://atlas.hashicorp.com/bento/centos-7.1
+I, [2017-02-02T15:46:13.117169 #25236]  INFO -- default-centos-71: ==> default: Adding box 'bento/centos-7.1' (v2.2.2) for provider: virtualbox
+I, [2017-02-02T15:46:13.119689 #25236]  INFO -- default-centos-71:     default: Downloading: https://vagrantcloud.com/bento/boxes/centos-7.1/versions/2.2.2/providers/virtualbox.box
