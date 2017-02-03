@@ -19,6 +19,9 @@ suites:
   - name: master
     run_list:
       - recipe[kubernete_deploy::master]
+    driver_config:
+        network:
+            - ['private_network', {ip: '10.208.104.141'}]
     verifier:
       inspec_tests:
         - test/smoke/default
@@ -27,6 +30,9 @@ suites:
   - name: node
     run_list:
       - recipe[kubernete_deploy::node]
+    driver_config:
+        network:
+            - ['private_network', {ip: '10.208.104.142'}]
     verifier:
       inspec_tests:
         - test/smoke/default

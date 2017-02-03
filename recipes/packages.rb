@@ -27,16 +27,33 @@ remote_file '/etc/yum.repos.d/docker.repo' do
   action :create
 end
 
-#set selinux to perrmissive in session
+#set selinux to permissive in session
 execute "disable selinux - running" do
       command "setenforce 0"
       action :run
 end
 
 # install packages
-package ['docker-engine', 'kubelet', 'kubeadm', 'kubectl','kubernetes-cni'] do
+yum_package ['docker-engine'] do
 	action:upgrade
 end
+
+yum_package ['kubelet'] do
+        action:upgrade
+end
+
+yum_package ['kubeadm'] do
+        action:upgrade
+end
+
+yum_package ['kubectl'] do
+        action:upgrade
+end
+
+yum_package ['kubernetes-cni'] do
+        action:upgrade
+end
+
 
 #enable and start services
 service "kubelet" do

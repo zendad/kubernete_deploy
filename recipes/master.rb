@@ -11,6 +11,6 @@ execute "initiate kubeadm master - get token" do
 end
 
 execute "pod network install" do
-	command " sudo kubectl apply -f https://git.io/weave-kube"
+	command "sudo kubectl apply -f https://git.io/weave-kube"
 	action :run
 end

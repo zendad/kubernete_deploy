@@ -8,24 +8,15 @@
 
 require 'spec_helper'
 
-describe 'multiple_actions::sequential' do
-  let(:chef_run) { ChefSpec::SoloRunner.new(platform: 'centos', version: '7.3.1611', log_level: :fatal).converge(described_recipe) }
+describe 'kubernete_deploy::packages' do
+  let(:chef_run) { ChefSpec::SoloRunner.new(platform: 'centos', version: '7.2.1511', log_level: :fatal).converge(described_recipe) }
   
   it 'creates a yum_repository with create action' do
-    expect(chef_run).to create_yum_repository('explicit_action')
+    expect(chef_run).to create_yum_repository('kubernetes')
   end
 
-   it 'creates repo file' do
-   chef_run = ChefSpec::Runner.new.converge(described_recipe)  
-    expect(chef_run).to create_file('/etc/yum.repos.d/docker.repo').with(
-    user: 'root', 
-    group: 'root'
-    backup: false
-    )
-   end
-
   it 'executes setenforce 0' do
-   expect(chef_run).to run_execute('setenforce 0')
+   expect(chef_run).to run_execute('disable selinux - running').with(command:'setenforce 0')
   end
 
   it 'install docker-engine' do

@@ -1,3 +1,2 @@
 source 'https://supermarket.chef.io'
-
-metadata
+cookbook 'kubernete_deploy', path: '/root/chef-repo/cookbooks/kubernete_deploy'
