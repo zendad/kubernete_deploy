@@ -7,7 +7,7 @@ provisioner:
   # You may wish to disable always updating cookbooks in CI or other testing environments.
   # For example:
   #   always_update_cookbooks: <%= !ENV['CI'] %>
-  always_update_cookbooks: true
+  #always_update_cookbooks: true
 
 verifier:
   name: inspec
@@ -16,23 +16,26 @@ platforms:
   - name: centos-7.3
 
 suites:
-  - name: master
+  - name: kuber-master
     run_list:
       - recipe[kubernete_deploy::master]
-    driver_config:
-        network:
-            - ['private_network', {ip: '10.208.104.141'}]
+    driver:
+      vm_hostname: kuber-master.dereck.com
+    network:
+        - ["hostonly", { ip: "192.168.10.21"}]
+
     verifier:
       inspec_tests:
         - test/smoke/default
     attributes:
 
-  - name: node
+  - name: kuber-node
     run_list:
       - recipe[kubernete_deploy::node]
-    driver_config:
-        network:
-            - ['private_network', {ip: '10.208.104.142'}]
+    driver:
+      vm_hostname: kuber-node1.dereck.com
+    network:
+        - ["hostonly", { ip: "192.168.10.21"}]
     verifier:
       inspec_tests:
         - test/smoke/default
